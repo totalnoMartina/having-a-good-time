@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from djreservation import urls as djreservation_urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+] + djreservation_urls.urlpatterns

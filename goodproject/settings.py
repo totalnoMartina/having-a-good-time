@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #  My app, modules
+    'bokingapplicationtry',
+    'djreservation',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #  Django reservation module middleware
+    'djreservation.middleware.ReservationMiddleware',
+
 ]
 
 ROOT_URLCONF = 'goodproject.urls'
@@ -69,6 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'goodproject.wsgi.application'
 
+
+# Email settings for dj-reservation
+
+DEFAULT_FROM_EMAIL = "mail@example.com"
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "1025"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
