@@ -9,4 +9,5 @@ class Room(UserObjectView):
     namespace = "room"  # required
     fields = [ ... ]  # not required
 
+
 room = Room()
